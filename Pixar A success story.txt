@@ -1,0 +1,15 @@
+Pixar: A success story.
+
+Toy Story, Cars, Ratatouille, and more recently, Soul and Luca: films that have shaped, influenced, and touched entire generations since the nineties, all originating from the same production studio, PIXAR. For me, Pixar is a cherished reminder of movie nights with my siblings, the thrill of going to the cinema, tears, and moments of laughter… 
+Today, I invite you to explore the success story of the pioneer of modern animated films through Eric Leung’s R dataset "pixarfilms."
+
+The Money-Maker Machine: 
+From groundbreaking beginnings with Toy Story in 1995, Pixar’s ability to deliver humorous yet poignant stories was a key factor in the company's successful trajectory. Indeed, the most profitable films are those from the so-called “sequel era,” with nostalgic young adults and new children flocking to the theatres to see the Toy Story sequels or Incredibles 2. However, we have witnessed a significant decline with Soul and Luca, which suffered due to the pandemic and their release solely on Disney’s streaming platform. Fortunately, Pixar need not be concerned about this any longer, with recent successes like Inside Out 2 grossing over 1.6 billion dollars worldwide.
+
+Hits and Misses: 
+Pixar films are not only lucrative; they are also cherished by critics and a broad audience. A clear trend emerges: nostalgia prevails. As anticipated, many films from Pixar’s Golden Era and their sequels occupy the upper-right quadrant, representing the intersection of high audience scores and substantial profits—Pixar’s secret formula: family-friendly stories with profound narratives.
+
+The Architects of Pixar:
+Behind every Pixar success stands a team of visionaries. The dataset highlights recurring names like John Lasseter, Andrew Staton and Pete Docter : shadowy figures behind the stories that shaped my childhood.
+
+Ultimately, Pixar’s magic lies in its relentless innovation, pushing animation and storytelling to new heights. The lesson? Never settle and strive to make each story better than the last.
