@@ -1,3 +1,18 @@
+# Pixar Data Visualization Project
+# CID 06018725
+# Date: 14/02/2025
+# Purpose: This script analyzes Pixar movies by visualizing key contributors, financial performance, 
+#          and critical reception using ggplot2, ggraph, and tidyverse.
+
+# Data Sources: 
+# pixarfilms' R package from Eric Leung : https://erictleung.com/pixarfilms/
+# - pixarfilms: Contains general information about Pixar movies.
+# - pixar_people: Data on contributors (directors, writers, etc.).
+# - box_office: Financial data (budget and revenue).
+# - academy: Award nominations and wins.
+# - public_response: critic and oublic response from different sources
+
+
 library(ggplot2)
 library(ggsci)
 library(tidyverse)
@@ -46,12 +61,11 @@ top_contributors <- edges %>%
 # Select edges and create graph
 filtered_edges <- edges %>%
   filter(name %in% top_contributors)
+
 g <- graph_from_data_frame(filtered_edges, directed = FALSE)
 
+
 V(g)$type <- V(g)$name %in% filtered_edges$film
-
-
-
 palette <- c("TRUE" = "#bf0000", "FALSE" = "#53a6a6")
 
 # Plot graph
