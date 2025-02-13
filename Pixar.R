@@ -60,7 +60,11 @@ ggraph(g, layout = "auto") +
   geom_node_point(aes(color = as.factor(V(g)$type), size = degree(g)), alpha = 0.8) + 
   geom_node_text(aes(label = name), repel = TRUE, size = 4) + 
   scale_color_manual(values = palette, labels = c("Films", "Contributors")) +  
-  theme_void() +  
+  theme(panel.background = element_rect(color = "gray9"),
+    legend.title = element_blank(),
+    legend.position = "right",
+    plot.title = element_text(size = 14, face = "bold")
+  )+  
   labs(title = "Pixar's Architects",
        subtitle = "Showing Pixar's top 5 contributors and the movies they participated in",
        color = "Type", 
@@ -136,18 +140,21 @@ pixar_data <- pixar_data %>%
 #Plot Graph 3 : Map of the Worth of each film and its perceived crtics response
 
 ggplot(pixar_data, aes(x = Grade, y = Worth / 1e6)) +
-  geom_rect(aes(xmin = 75, xmax = Inf, ymin = 500, ymax = Inf), fill = "lightgreen", alpha = 0.02) +
-  geom_rect(aes(xmin = -Inf, xmax = 75, ymin = 500, ymax = Inf), fill = "lightblue", alpha = 0.02) +
-  geom_rect(aes(xmin = 75, xmax = Inf, ymin = -Inf, ymax = 500), fill = "lightyellow", alpha = 0.02) +
-  geom_rect(aes(xmin = -Inf, xmax = 75, ymin = -Inf, ymax = 500), fill = "lightpink", alpha = 0.02) +
+  geom_rect(aes(xmin = 75, xmax = Inf, ymin = 500, ymax = Inf), fill = "#567345", alpha = 0.02) +
+  geom_rect(aes(xmin = -Inf, xmax = 75, ymin = 500, ymax = Inf), fill = "#53A6A6", alpha = 0.02) +
+  geom_rect(aes(xmin = 75, xmax = Inf, ymin = -Inf, ymax = 500), fill = "#cca33d", alpha = 0.02) +
+  geom_rect(aes(xmin = -Inf, xmax = 75, ymin = -Inf, ymax = 500), fill = "#BF0000", alpha = 0.02) +
   geom_point(aes(size = Nominated^2, shape = Era),color = "black") +
   geom_text_repel(aes(label = str_wrap(film, 8)), color = "black", box.padding = unit(1, "lines")) +
   geom_smooth(method = "lm", se = FALSE, color = "black", linetype = "dashed") +
   theme_light() +
   theme(
-    panel.grid = element_blank(),
-    legend.title = element_text(color = "black", size = 11, face = "bold")
-  ) +
+    axis.text = element_text(size = 12, color = "black"),
+    axis.title = element_text(size = 14, face = "bold"),
+    legend.title = element_blank(),
+    legend.position = "right",
+    plot.title = element_text(size = 14, face = "bold")
+  )+
   scale_size_continuous(
     name = "Number of Nominations",
     breaks = c(0, 4, 16, 36),
@@ -156,11 +163,12 @@ ggplot(pixar_data, aes(x = Grade, y = Worth / 1e6)) +
   labs(
     y = "Movie Profit (Millions of US Dollars)",
     x = "Average Grade",
-    title = "Pixar's Success: A Data-Driven View",
+    title = "Pixar's Success",
+    subtitle = "How different pixar's Era were received by the critics",
     caption = "Data: Eric T. Leung"
   ) +
-  annotate("text", x = 85, y = 900, label = "Pixar Legends️", size =4, fontface = "bold", color = "darkgreen") +
-  annotate("text", x = 60, y = 900, label = "Box Office Hits ", size = 4, fontface = "bold", color = "darkblue") +
-  annotate("text", x = 85, y = 200, label = "Critics' Darlings", size = 4, fontface = "bold", color = "goldenrod") +
-  annotate("text", x = 60, y = 200, label = "Underdogs", size = 4, fontface = "bold", color = "darkred") #+
+  annotate("text", x = 85, y = 900, label = "Pixar Legends️", size =4, fontface = "bold", color = "#304026") +
+  annotate("text", x = 60, y = 900, label = "Box Office Hits ", size = 4, fontface = "bold", color = "#397373") +
+  annotate("text", x = 85, y = 200, label = "Critics' Darlings", size = 4, fontface = "bold", color = "#997a2e") +
+  annotate("text", x = 60, y = 200, label = "Underdogs", size = 4, fontface = "bold", color = "#8C0000") #+
   
