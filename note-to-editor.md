@@ -9,4 +9,4 @@ For style's guidelines, make sure that,in the bar-chart, _Box-Office_ and _Budge
 I tried to respect the graphics style guide as best as I can. However, I did not succeed in implementing and installing the right font in R. Also, the callouts in the barchart are not exactly as expected. I thought it was a bit overloading. 
 For the color palettes, I followed the recommended colors but I think  more dynamic and vibrant colors would suit best Pixar’s Universe.
 
-For future refinements, I would improve the Pixar contributors' graph to emphasize the professionals roles in each film. Another thing I thought about was to work with the illustration and artistic team for an illustration to this small article, maybe something with barplots looking like characters of the Pixar Universe. You would find a figure of sketches I made for some characters.
+For future refinements, I would improve the Pixar contributors' graph to emphasize the professionals roles in each film. Another thing I thought about was to work with the illustration and artistic team for an illustration to this small article, maybe something with barplots looking like characters of the Pixar Universe.
